@@ -1,0 +1,41 @@
+{
+  "suggest.enablePreview": true,
+  "suggest.enablePreselect": false,
+  "suggest.noselect": true,
+  "suggest.timeout": 500,
+  "suggest.enableFloat": true,
+  "diagnostic.messageTarget": "float",
+  "signature.target": "float",
+  "coc.preferences.hoverTarget": "float",
+  "languageserver": {
+    "pylance": {
+      "enable": true,
+      "filetypes": [
+        "python"
+      ],
+      "env": {
+        "ELECTRON_RUN_AS_NODE": "0",
+        "VSCODE_NLS_CONFIG": "{\"locale\": \"en\"}"
+      },
+      "module": "${userHome}/.vscode/extensions/ms-python.vscode-pylance-*/dist/server.bundle.js",
+      "initializationOptions": {},
+      "settings": {
+        "python.analysis.typeCheckingMode": "basic",
+        "python.analysis.inlayHints.functionReturnTypes": true,
+        "python.analysis.inlayHints.variableTypes": true,
+        "python.analysis.inlayHints.parameterTypes": true,
+        "python.analysis.diagnosticMode": "openFilesOnly",
+        "python.analysis.stubPath": "./typings",
+        "python.analysis.autoSearchPaths": true,
+        "python.analysis.extraPaths": [],
+        "python.analysis.diagnosticSeverityOverrides": {},
+        "python.analysis.useLibraryCodeForTypes": true
+      }
+    },
+    "rust": {
+      "command": "rust-analyzer",
+      "filetypes": ["rust"],
+      "rootPatterns": ["Cargo.toml"]
+    }
+  }
+}
